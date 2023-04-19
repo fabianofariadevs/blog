@@ -1,0 +1,50 @@
+{% extends "dashboard.html" %}
+
+{% block conteudo %}  
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-white border-0">
+        <a class="card-title">Mix Produtos</a>
+        <a href="{{url('producao/mixProdutos/cadastrar')}}" class="btn btn-primary">Cadastar</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nome Produto</th>
+                        <th scope="col">departamento</th>
+                        <th scope="col">Rend_Kg</th>
+                        <th scope="col">Rend_receita_Unid</th>
+                        <th scope="col">Validade</th>
+                        <th scope="col">Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for mixProduto in mixProdutos %}
+                    <tr>
+                        <th>{{mixProduto.id_tbl_produto_mix}}</th>
+                        <td>{{mixProduto.produto_mix}}</td>
+                        <td>{{mixProduto.departamento}}</td>
+                        <td>{{mixProduto.rendimento_receita_kg}}</td>
+                        <td>{{mixProduto.rendimento_receita_unid}}</td>
+                        <td>{{mixProduto.validade_produto}}</td>
+                        <td>{{mixProduto.categoria_produto}}</td>
+                        <td>
+                            {% if mixProduto.status == 1 %}
+                            Ativo
+                            {% else %}
+                            Inativo
+                            {% endif %}
+                        </td>
+                        <td></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>     
+        
+        
+    </div>
+</div>
+{% endblock %}

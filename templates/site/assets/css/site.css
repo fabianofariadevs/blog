@@ -1,0 +1,12 @@
+a {
+    color: #222
+}
+a:hover {
+    color: #666
+}
+.texto {
+    font-weight: 400;
+    font-size: 14pt;
+    color: #555;
+    line-height: 30px;
+}

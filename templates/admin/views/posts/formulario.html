@@ -1,0 +1,58 @@
+{% extends "dashboard.html" %}
+
+{% block conteudo %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{url('admin/dashboard')}}">
+                Home
+            </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            Posts
+        </li>
+    </ol>
+</nav>
+
+{{ flash() }}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+       <form action="{% if post.id %}{{url('admin/posts/editar/'~post.id)}}{%else%}{{url('admin/posts/cadastrar')}}{%endif%}" method="post">
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" name="titulo" id="titulo" value="{{post.titulo}}" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="texto" class="form-label">Texto</label>
+                <textarea name="texto" id="texto" class="form-control" rows="3">{{post.texto}}</textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="categoria_id" class="form-label">Categoria</label>
+                        <select class="form-select" name="categoria_id" id="categoria_id">
+                            {% for categoria in categorias %}
+                            <option value="{{categoria.id}}" {% if post.categoria_id == categoria.id %}selected{%endif%}>{{categoria.titulo}}</option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" name="status">
+                           <option value="1" {% if post.status == '1' %}selected{%endif%}>Ativo</option>
+                <option value="0" {% if post.status == '0' %}selected{%endif%}>Inativo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+             <input type="submit" class="btn btn-primary" value="{% if post.id %}Atualizar{%else%}Cadastrar{%endif%}">
+        </form>
+    </div>    
+</div>
+</div>
+{% endblock %}

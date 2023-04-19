@@ -1,0 +1,23 @@
+<h4 class="text-center fw-bold">
+    Categorias
+</h4>
+
+<ul class="list-group list-group-flush">
+    {% for categoria in categorias %}
+    <li class="list-group-item d-flex justify-content-between">
+        <a href="{{url('categoria/'~categoria.slug)}}" class="fw-bold" tooltip="tooltip" title="{{categoria.titulo}}">
+            {{categoria.titulo}}
+        </a>
+        <div class="fw-normal">
+            <a href="{{ url('admin/categorias/editar/'~categoria.id) }}" tooltip="tooltip" title="Editar">
+                <i class="fa-solid fa-pen m-1"></i>
+            </a>
+            <a href="{{ url('admin/categorias/deletar/'~categoria.id) }}" tooltip="tooltip" title="Deletar">
+                <i class="fa-solid fa-trash m-1"></i>
+            </a>
+        </div>
+    </li>
+
+
+    {% endfor %}
+</ul>

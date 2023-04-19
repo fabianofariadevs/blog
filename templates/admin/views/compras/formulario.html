@@ -1,0 +1,71 @@
+{% extends "dashboard.html" %}
+
+{% block conteudo %}  
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{url('admin/dashboard')}}">
+                Admin
+            </a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            Receitas
+        </li>
+    </ol>
+</nav>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <form action="{% if receita.id %}{{url('admin/receita/editar/'~receita.id)}}{%else%}{{url('admin/receitas/cadastrar')}}{%endif%}" method="post">
+            <div class="mb-3">
+                <label for="nomeReceita" class="form-label">Nome da Receita</label>
+                <input type="text" name="nomeReceita" id="nomeReceita" class="form-control"></input>             
+            </div>
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <input type="text" name="descricao" id="descricao" class="form-control"></input>
+            </div>
+            
+            <div class="mb-3">
+                <label for="preparo" class="form-label">Modo de preparo</label>
+                <textarea name="preparo" id="preparo" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="qtde" class="form-label">Qtde prevista da receita</label>
+                <textarea name="qtde" id="qtde" class="form-control" rows="1"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="validade" class="form-label">Validade</label>
+                <textarea name="validade" id="validade" class="form-control" rows="1"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="obs" class="form-label">Observação</label>
+                <textarea name="obs" id="obs" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="cliente_id" class="form-label">Cliente</label>
+                        <select class="form-select" name="cliente_id" id="cliente.id_tbl_cliente">
+                            {% for cliente in clientes %}
+                            <option value="{{cliente.id_tbl_cliente}}">{{cliente.nome_cliente}}</option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" name="status">
+                            <option value="1">Ativo</option>
+                            <option value="0">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Cadastrar">
+                
+        </form>   
+    </div>
+</div>
+{% endblock %}
