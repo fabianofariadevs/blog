@@ -44,9 +44,10 @@ body {
     color: #fff !important;
 }
 .logo {
-  
-    max-width: 190px;
-    margin: auto !important
+    width: 80%;
+    max-width: 150px;
+    margin: auto !important;
+    margin-left: 0px;
 }
 .sidebarTitulo {
     color: var(--cor12);

@@ -47,7 +47,7 @@ class AdminEstoqueMp extends AdminControlador
                 $post->usuario_id = $this->usuario->id;
                 $post->categoria_id = $dados['categoria_id'];
                 $post->slug = Helpers::slug($dados['titulo']);
-                $post->titulo = $dados['titulo'];                
+                $post->titulo = $dados['titulo'];
                 $post->texto = $dados['texto'];
                 $post->status = $dados['status'];
 
@@ -85,7 +85,7 @@ class AdminEstoqueMp extends AdminControlador
                 $post->usuario_id = $this->usuario->id;
                 $post->categoria_id = $dados['categoria_id'];
                 $post->slug = Helpers::slug($dados['titulo']);
-                $post->titulo = $dados['titulo'];                
+                $post->titulo = $dados['titulo'];
                 $post->texto = $dados['texto'];
                 $post->status = $dados['status'];
                 $post->atualizado_em = date('Y-m-d H:i:s');
@@ -148,5 +148,16 @@ class AdminEstoqueMp extends AdminControlador
             }
         }
     }
+
+    ######
+
+    public function inventario(): void
+    {
+        echo $this->template->renderizar('estoqueMp/inventario.html', [
+                ]
+        );
+    }
+
+    
 
 }

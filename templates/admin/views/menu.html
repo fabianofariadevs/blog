@@ -2,8 +2,8 @@
 <div class="sidebar">
     <div class="sidebarLogo">
         <a href="{{url('admin/dashboard')}}" data-bs-toggle="tooltip" title="Pagina Inicial">
-            <div class="log">
-                <img src="https://i.postimg.cc/k54vbtBF/userlmn-ebfdb7b90b9b59a3c0ece37c1d46cf20-removebg-preview.png" alt="{{constant('SITE_NOME')}}"/>
+            <div class="logo">
+                <img src="https://i.postimg.cc/k54vbtBF/userlmn-ebfdb7b90b9b59a3c0ece37c1d46cf20-removebg-preview.png" alt="{{constant('SITE_NOME')}}" />
             </div>
         </a>
     </div>
@@ -61,16 +61,11 @@
                     <span>PLANEJAMENTO de Produção</span>
                 </a>
             </li>
+            
             <li>
-                <a href="{{url('admin/compras/listar')}}" tooltip="tooltip" title="Administração Compras Produção">
+                <a href="{{url('admin/estoqueMp/listar')}}" tooltip="tooltip" title="Controle de Estoques/Gerenciador de Compras">
                     <i class="fa-solid fa-list"></i>
-                    <span>Compras / Pedidos</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{url('admin/estoqueMp/listar')}}" tooltip="tooltip" title="Administração Estoque/M.Prima">
-                    <i class="fa-solid fa-list"></i>
-                    <span>Estoque / Matéria Prima</span>
+                    <span>Gerenciador e Controle<br> <pre>     Estoques e Compras </pre> </span>
                 </a>
             </li>
         </ul>
