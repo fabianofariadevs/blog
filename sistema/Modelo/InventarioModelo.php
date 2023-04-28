@@ -7,7 +7,7 @@ use sistema\Nucleo\Modelo;
 /**
  * Classe PostModelo
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class InventarioModelo extends Modelo
 {

@@ -8,7 +8,7 @@ use sistema\Nucleo\Helpers;
 /**
  * Classe AdminCategorias
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminCategorias extends AdminControlador
 {

@@ -9,7 +9,7 @@ use sistema\Nucleo\Helpers;
 /**
  * Classe AdminPosts
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminPosts extends AdminControlador
 {

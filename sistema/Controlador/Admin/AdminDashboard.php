@@ -11,7 +11,7 @@ use sistema\Modelo\CategoriaModelo;
 /**
  * Classe AdminDashboard
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminDashboard extends AdminControlador
 {

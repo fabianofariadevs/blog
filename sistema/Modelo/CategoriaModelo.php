@@ -7,7 +7,7 @@ use sistema\Nucleo\Modelo;
 /**
  * Classe CategoriaModelo
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class CategoriaModelo extends Modelo
 {

@@ -4,6 +4,11 @@ namespace sistema\Controlador\Admin;
 
 use sistema\Modelo\ReceitaModelo;
 use sistema\Nucleo\helpers;
+/**
+ * Classe AdminReceitas
+ *
+ * @author Fabiano Faria
+ */
 
 class AdminReceitas extends AdminControlador
 {

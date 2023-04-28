@@ -3,6 +3,11 @@
 namespace sistema\Controlador\Admin;
 
 use sistema\Modelo\MixProdutosModelo;
+/**
+ * Classe AdminMixProdutos
+ *
+ * @author Fabiano Faria
+ */
 
 class AdminMixProdutos extends AdminControlador
 {

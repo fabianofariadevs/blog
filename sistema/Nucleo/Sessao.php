@@ -5,7 +5,7 @@ namespace sistema\Nucleo;
 /**
  * Classe Sessao
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class Sessao
 {

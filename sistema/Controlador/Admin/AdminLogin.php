@@ -10,7 +10,7 @@ use sistema\Controlador\UsuarioControlador;
 /**
  * Classe AdminLogin
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminLogin extends Controlador
 {

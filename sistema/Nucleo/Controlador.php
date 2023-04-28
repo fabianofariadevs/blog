@@ -7,7 +7,7 @@ use sistema\Suporte\Template;
 /**
  * Classe Controlador, responsável por instanciar templates e mensagens para uso global
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class Controlador
 {

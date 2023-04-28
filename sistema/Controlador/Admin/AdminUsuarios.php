@@ -8,7 +8,7 @@ use sistema\Modelo\UsuarioModelo;
 /**
  * Classe AdminUsuarios
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminUsuarios extends AdminControlador
 {

@@ -9,7 +9,7 @@ use sistema\Nucleo\Helpers;
 /**
  * Classe UsuarioModelo
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class UsuarioModelo extends Modelo
 {

@@ -8,7 +8,7 @@ use sistema\Nucleo\Mensagem;
 /**
  * Classe Active Record Modelo - Active Record é um padrão de projeto que trabalha com a técnica ORM (Object Relational Mapper). Este padrão consiste em mapear um objeto a uma tabela do Banco da dados, a fim de tornar o trabalho com os dados persistido em um banco de dados, totalmente orientado a objetos.
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 abstract class Modelo
 {

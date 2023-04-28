@@ -8,7 +8,7 @@ use PDOException;
 /**
  * Classe Conexao - Padrão Singleton: Retorna uma instância única de uma classe.
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class Conexao
 {

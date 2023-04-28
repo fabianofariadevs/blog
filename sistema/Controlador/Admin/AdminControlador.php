@@ -10,7 +10,7 @@ use sistema\Nucleo\Sessao;
 /**
  * Classe AdminControlador
  *
- * @author Ronaldo Aires
+ * @author Fabiano Faria
  */
 class AdminControlador extends Controlador
 {
